@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonmonitor
+  labels:
+    app: monitorapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitorapp
+  template:
+    metadata:
+      labels:
+        app: monitorapp
+    spec:
+      containers:
+      - name: monitorapp
+        image: sreedocker123/cafewebimage:final
+        ports:
+        - containerPort: 5000
