@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: monitorapp
-        image: sreedocker123/cafewebimage:final
+        image: sreedocker123/pythonmonitoringapp:v1
         ports:
         - containerPort: 5000
